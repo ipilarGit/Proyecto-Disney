@@ -1,0 +1,15 @@
+
+
+CREATE TABLE personajes(id_character SERIAL PRIMARY KEY, image VARCHAR(255) NOT NULL, name VARCHAR(100) NOT NULL, age INT NOT NULL, weight INT NOT NULL, history VARCHAR(255));
+
+CREATE TABLE reparto(id SERIAL PRIMARY KEY, id_movie INT NOT NULL, id_character INT NOT NULL );
+
+CREATE TABLE peliculas(id_movie SERIAL PRIMARY KEY, image VARCHAR(255) NOT NULL, title VARCHAR(100) NOT NULL, create_date TIMESTAMP NOT NULL, qualification INT NOT NULL);
+
+CREATE TABLE genero(id_gender SERIAL PRIMARY KEY, gender VARCHAR(50) NOT NULL);
+
+CREATE TABLE caracteriza(id SERIAL PRIMARY KEY, id_movie INT NOT NULL, id_gender INT NOT NULL );
+
+CREATE TABLE usuarios(id_user SERIAL PRIMARY KEY, email VARCHAR(100) NOT NULL, password VARCHAR(20) NOT NULL);
+
+
